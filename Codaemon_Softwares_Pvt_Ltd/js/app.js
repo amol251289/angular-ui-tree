@@ -73,17 +73,17 @@ angular
 	       return moment(date).format('DD-MM-YYYY');
 	    };
 
-	    $scope.toggleForm = function(){
+	    $scope.toggleForm = function(status){
 			if($scope.table_form == true)
 			{
-				if (angular.isDefined($scope.newArray) && $scope.newArray.length > 0) 
+				if (angular.isDefined(status) && status=='back') 
+				{
+					thisCtrl.getCodaemon();
+				}
+				else if (angular.isDefined($scope.newArray) && $scope.newArray.length > 0) 
 				{
 					$scope.codaemonDetails = [];
 					$scope.codaemonDetails = $scope.newArray;
-				}
-				else
-				{
-					thisCtrl.getCodaemon();
 				}
 				$scope.table_form = false;
 			}

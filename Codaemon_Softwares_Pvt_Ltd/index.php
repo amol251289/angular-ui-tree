@@ -59,10 +59,10 @@
             <div class="card-header">
                <strong>Search</strong>
                <div class="float-right mb-0">
-                  <button class="btn btn-primary" ng-click="toggleForm()">Back</button>
+                  <button class="btn btn-primary" ng-click="toggleForm('back')">Back</button>
                </div>
             </div>
-            <form name="BlogForm" ng-submit="searchDetails(formdata)" novalidate>
+            <form name="codaemonForm" ng-submit="searchDetails(formdata)" novalidate>
                <div class="card-body">
                   <div class="form-group ">
                      <label for="First-name">First Name</label>
