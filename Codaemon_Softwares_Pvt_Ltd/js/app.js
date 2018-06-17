@@ -85,6 +85,11 @@ angular
 					$scope.codaemonDetails = [];
 					$scope.codaemonDetails = $scope.newArray;
 				}
+				else
+				{
+					$scope.codaemonDetails = [];
+					$scope.codaemonDetails = $scope.newArray;
+				}
 				$scope.table_form = false;
 			}
 			else
@@ -100,7 +105,7 @@ angular
 					$scope.showCommonLoadingIcon();
 				angular.forEach($scope.codaemonDetails, function(value)
 				{
-					if (angular.isDefined(formdata.first_name) && formdata.first_name && angular.isDefined(formdata.last_name) && formdata.last_name)
+					if (angular.isDefined(formdata) && angular.isDefined(formdata.first_name) && formdata.first_name && angular.isDefined(formdata.last_name) && formdata.last_name)
                 	{
                 		if(value.first_name === formdata.first_name && value.last_name === formdata.last_name)
 						{
