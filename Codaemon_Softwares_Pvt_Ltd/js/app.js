@@ -112,14 +112,14 @@ angular
 							$scope.newArray.push(value);
 						}
                 	}
-					else if (angular.isDefined(formdata.first_name) && formdata.first_name) 
+					else if ( angular.isDefined(formdata) && angular.isDefined(formdata.first_name) && formdata.first_name) 
                 	{
 						if(value.first_name===formdata.first_name)
 						{
 							$scope.newArray.push(value);
 						}
 					}
-					else if (angular.isDefined(formdata.last_name) && formdata.last_name)
+					else if ( angular.isDefined(formdata) && angular.isDefined(formdata.last_name) && formdata.last_name)
                 	{
 						if(value.last_name === formdata.last_name)
 						{
