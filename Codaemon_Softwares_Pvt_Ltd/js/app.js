@@ -45,14 +45,9 @@ angular
 
 		thisCtrl.getCodaemon = function(){
 			$scope.showCommonLoadingIcon();
-			var url = '../Codaemon_Softwares_Pvt_Ltd/codaemon_Softwares_Pvt_Ltd_api.php';
+			var url = 'https://data.cityofnewyork.us/resource/5scm-b38n.json';
 			$http
-				.get(url,{headers: {
-									'Access-Control-Allow-Origin':'*',
-									'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE',
-									'Access-Control-Allow-Headers':'x-requested-with'
-								}
-				})
+				.get(url)
 				.success(function(response) {
 					$scope.codaemonDetails = response;
 					$scope.removeCommonLoadingIcon();
